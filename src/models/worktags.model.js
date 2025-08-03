@@ -1,17 +1,14 @@
 import { model, Schema } from "mongoose";
 
 const schema = new Schema({
-    role: {
+    label: {
         type: String
     },
-    description: {
-        type: String
-    },
-    imgUrl: {
+    value: {
         type: String
     }
 }, { strict: true });
 
-const About = model('about', schema);
+const WorkTags = model('worktag', schema);
 
-export default About;
+export default WorkTags;

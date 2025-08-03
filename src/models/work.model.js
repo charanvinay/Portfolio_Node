@@ -1,17 +1,20 @@
 import { model, Schema } from "mongoose";
 
 const schema = new Schema({
-    role: {
-        type: String
-    },
-    description: {
-        type: String
-    },
     imgUrl: {
         type: String
+    },
+    projectLink: {
+        type: String
+    },
+    codeLink: {
+        type: String
+    },
+    tags: {
+        type: [String]
     }
 }, { strict: true });
 
-const About = model('about', schema);
+const Works = model('work', schema);
 
-export default About;
+export default Works;
